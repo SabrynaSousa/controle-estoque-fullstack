@@ -1,85 +1,75 @@
-Sistema de Controle de Estoque
+# Sistema de Controle de Estoque
 
+---
 
+Este projeto é um **Sistema de Controle de Estoque** completo, desenvolvido com um **backend em Spring Boot** e um **frontend em React**. Ele permite o gerenciamento de produtos e a visualização do estoque através de uma interface web intuitiva e responsiva.
 
+## Tecnologias Utilizadas
 
+### Backend
 
+* **Spring Boot:** Framework Java para construção da API REST.
+* **MySQL / H2:** Banco de dados relacional. Pode ser configurado para persistência com MySQL ou para uso em memória com H2.
+* **JPA/Hibernate:** ORM (Object-Relational Mapping) para facilitar a comunicação com o banco de dados.
+* **Swagger:** Ferramenta para documentação automática da API REST, facilitando o entendimento dos endpoints.
 
+### Frontend
 
+* **React:** Biblioteca JavaScript para construção da interface de usuário (UI).
+* **TypeScript:** Superset do JavaScript que adiciona tipagem estática, garantindo maior robustez ao código.
+* **Axios:** Cliente HTTP para realizar requisições à API.
+* **Tailwind CSS:** Framework CSS para estilização rápida e responsiva.
 
-Sistema completo de controle de estoque, com backend em Spring Boot e frontend em React, que permite gerenciar produtos e visualizar o estoque através de uma interface web.
+---
 
-Tecnologias Utilizadas
-Camada	Tecnologia	Descrição
-Backend	Spring Boot	Framework Java para API REST
-Backend	MySQL / H2	Banco de dados relacional (persistente ou in-memory)
-Backend	JPA/Hibernate	ORM para comunicação com o banco
-Backend	Swagger	Documentação automática da API REST
-Frontend	React	Construção da interface de usuário
-Frontend	TypeScript	Tipagem estática para JavaScript
-Frontend	Axios	Cliente HTTP para requisições à API
-Frontend	Tailwind CSS	Estilização rápida e responsiva
-Como Iniciar o Projeto
+## Como Iniciar o Projeto
 
-Você precisará de duas janelas de terminal, uma para o backend e outra para o frontend.
+Para rodar o projeto, você precisará de duas janelas de terminal: uma para o backend e outra para o frontend.
 
-1. Backend (Spring Boot)
+### 1. Backend (Spring Boot)
 
-Abra o projeto no editor de código (VS Code, Spring Tool Suite, etc.).
+1.  Abra o projeto no seu editor de código (VS Code, Spring Tool Suite, etc.).
+2.  Certifique-se de que o **MySQL** está em execução ou, alternativamente, use o **H2 in-memory** para um ambiente rápido de desenvolvimento.
+3.  Execute a classe principal `ControleDeEstoqueApplication.java` ou utilize o Maven:
+    ```bash
+    mvn spring-boot:run
+    ```
+4.  A API estará disponível em: [http://localhost:8080](http://localhost:8080)
+5.  A documentação da API (Swagger UI) pode ser acessada em: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+6.  Caso esteja usando o H2 Console (In-Memory), os detalhes de acesso são:
+    * **URL:** `http://localhost:8080/h2-console`
+    * **JDBC URL:** `jdbc:h2:mem:estoquedb`
+    * **User:** `sa`
+    * **Password:** `password`
 
-Certifique-se de que o MySQL está rodando ou use o H2 in-memory.
+### 2. Frontend (React)
 
-Execute a classe principal ControleDeEstoqueApplication.java ou use Maven:
+1.  Navegue até a pasta do frontend no terminal:
+    ```bash
+    cd frontend
+    ```
+2.  Instale as dependências do projeto:
+    ```bash
+    npm install
+    ```
+3.  Inicie a aplicação:
+    ```bash
+    npm start
+    ```
+4.  Acesse a aplicação no seu navegador: [http://localhost:3000](http://localhost:3000)
 
-mvn spring-boot:run
+---
 
+## Funcionalidades
 
-A API estará disponível em: http://localhost:8080
+* **Visualizar Produtos:** Exibe uma lista de todos os produtos cadastrados no estoque.
+* **Adicionar Produtos:** Permite o cadastro de novos produtos através de um formulário simples, que inclui nome, preço e quantidade. A tabela de produtos é atualizada automaticamente após o cadastro.
 
-Documentação Swagger: http://localhost:8080/swagger-ui.html
+---
 
-H2 Console (In-Memory)
+## Contato & Contribuições
 
-URL: http://localhost:8080/h2-console
+Sinta-se à vontade para contribuir com o projeto!
 
-JDBC URL: jdbc:h2:mem:estoquedb
-
-User: sa
-
-Password: password
-
-
-
-2. Frontend (React)
-
-Navegue até a pasta do frontend:
-
-cd frontend
-
-
-Instale as dependências:
-
-npm install
-
-
-Inicie a aplicação:
-
-npm start
-
-
-Acesse no navegador: http://localhost:3000
-
-Funcionalidades        
-
-Visualizar Produtos: Lista todos os produtos do estoque.
-
-Adicionar Produtos: Formulário para cadastrar nome, preço e quantidade de novos produtos. A tabela atualiza automaticamente.
-
-
-
-
-Contato & Contribuições  
-
-Abra uma issue para problemas ou dúvidas.
-
-Envie um pull request para melhorias.
+* **Problemas e Dúvidas:** Abra uma **issue** para reportar bugs ou fazer perguntas.
+* **Melhorias:** Envie um **pull request** com suas sugestões e melhorias.
